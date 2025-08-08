@@ -1,0 +1,424 @@
+import {
+  github,
+  instagram,
+  linkedin,
+
+  html,
+  css,
+  javascript,
+  typescript,
+  python,
+  c,
+  java,
+  reactjs,
+  tailwind,
+  nodejs,
+  mongodb,
+  mysql,
+  postgres,
+  docker,
+  figma,
+  git,
+  threejs,
+  flutter,
+  postman,
+  express,
+  gcp,
+  colab,
+
+  ssnLogo,
+  tptLogo,
+
+  passwordapp,
+  nextgenChatbot,
+  assitiveGlasses,
+  jobconnect,
+  boneFracture,
+
+  backend,
+  creator,
+  mobile,
+  web,
+  cplusplus,
+} from "../assets";
+
+const navLinks = [
+  {
+    id: "about",
+    title: "About",
+  },
+  {
+    id: "education",
+    title: "Education",
+  },
+  {
+    id: "experience",
+    title: "Experience",
+  },
+  {
+    id: "skills",
+    title: "Skills",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+  },
+];
+
+const sequenceText = [
+  "Full Stack Developer",
+  1000,
+  "Flutter Developer",
+  1000,
+  "<ReactJs Developer />",
+  1000,
+  "MERN Stack Developer",
+  1000,
+  "Problem Solver",
+  1000,
+];
+
+const socials = [
+  {
+    id: "github",
+    icon: github,
+    link: "https://github.com/Srikanth-1106",
+  },
+  {
+    id: "linkedin",
+    icon: linkedin,
+    link: "https://www.linkedin.com/in/srikanthatssn",
+  },
+  {
+    id: "instagram",
+    icon: instagram,
+    link: "https://www.instagram.com/kaadhu_kuthu/",
+  },
+];
+
+const services = [
+  {
+    title: "Web Developer",
+    icon: web,
+  },
+  {
+    title: "Problem Solving",
+    icon: mobile,
+  },
+  {
+    title: "Backend Developer",
+    icon: backend,
+  },
+  {
+    title: "Flutter Developer",
+    icon: creator,
+  },
+];
+
+const technologies = {
+  languages: [
+    {
+      name: "HTML5",
+      icon: html,
+      link: "https://html.spec.whatwg.org/multipage/",
+    },
+    {
+      name: "CSS3",
+      icon: css,
+      link: "https://www.w3.org/Style/CSS/Overview.en.html",
+    },
+    {
+      name: "JavaScript",
+      icon: javascript,
+      link: "https://262.ecma-international.org/",
+    },
+    {
+      name: "TypeScript",
+      icon: typescript,
+      link: "https://www.typescriptlang.org/",
+    },
+    {
+      name: "C",
+      icon: c,
+      link: "https://en.cppreference.com/w/c",
+    },
+    {
+      name: "C++",
+      icon: cplusplus,
+      link: "https://cplusplus.com/",
+    },
+    {
+      name: "Java",
+      icon: java,
+      link: "https://www.java.com/en/",
+    },
+    {
+      name: "Python",
+      icon: python,
+      link: "https://www.python.org/",
+    },
+  ],
+  frameworks: [
+    {
+      name: "TailwindCSS",
+      icon: tailwind,
+      link: "https://tailwindcss.com/",
+    },
+    {
+      name: "Express.js",
+      icon: express,
+      link: "https://expressjs.com/",
+    },
+    {
+      name: "Flutter",
+      icon: flutter,
+      link: "https://flutter.dev/",
+    },
+  ],
+  libraries: [
+    {
+      name: "React",
+      icon: reactjs,
+      link: "https://react.dev/",
+    },
+    {
+      name: "Three.js",
+      icon: threejs,
+      link: "https://threejs.org/",
+    },
+  ],
+  databases: [
+    {
+      name: "MySQL",
+      icon: mysql,
+      link: "https://www.mysql.com/",
+    },
+    {
+      name: "PostgreSQL",
+      icon: postgres,
+      link: "https://www.postgresql.org",
+    },
+    {
+      name: "MongoDB",
+      icon: mongodb,
+      link: "https://www.mongodb.com/",
+    },
+  ],
+  tools: [
+    {
+      name: "Git",
+      icon: git,
+      link: "https://git-scm.com/",
+    },
+    {
+      name: "GitHub",
+      icon: github,
+      link: "https://github.com/",
+    },
+    {
+      name: "Postman",
+      icon: postman,
+      link: "https://www.postman.com/",
+    },
+    {
+      name: "Figma",
+      icon: figma,
+      link: "https://www.figma.com/",
+    },
+    {
+      name: "Docker",
+      icon: docker,
+      link: "https://www.docker.com/",
+    },
+  ],
+  environments: [
+    {
+      name: "Node.js",
+      icon: nodejs,
+      link: "https://nodejs.org/en",
+    },
+    {
+      name: "Google Cloud Platform", 
+      icon: gcp,
+      link: "https://console.cloud.google.com/",
+    },
+    {
+      name: "Google Colab",
+      icon: colab,
+      link: "https://colab.research.google.com/",
+    },
+  ],
+};
+
+const education = [
+  {
+    title: "SSN College of Engineering",
+    name: "B.E. in Computer Science and Engineering",
+    icon: ssnLogo,
+    date: "Sep 2023 - Present",
+    points: [
+      "Currently pursuing Bachelor of Engineering in Computer Science and Engineering",
+      "CGPA: 6.1 / 10",
+      "Studying core computer science subjects including Data Structures, Algorithms, Database Management Systems, and Software Engineering."
+    ],
+  },
+  {
+    title: "Thiagarajar Polytechnic College",
+    name: "Diploma in Computer Science",
+    icon: tptLogo,
+    date: "Nov 2020 - Jun 2023",
+    points: [
+      "Completed Diploma in Computer Science with excellent academic performance",
+      "Percentage: 87.4%",
+      "Gained strong foundation in programming, web development, and computer science fundamentals."
+    ],
+  },
+];
+
+const projects = [
+  {
+    name: "TicTacToe Game (Front End)",
+    description:
+      "Interactive React.js game with modern UI and smooth animations. Features include game state management, win detection, and responsive design for all devices.",
+    tags: [
+      {
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "HTML",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: passwordapp,
+    source_code_link:
+      "https://github.com/Srikanth-1106/TicTacToe",
+  },
+  {
+    name: "Pet Adoption Website (Full Stack)",
+    description:
+      "Pet adoption and product listing MERN app with admin/user features. Includes user authentication, pet listings, admin dashboard, and responsive design.",
+    tags: [
+      {
+        name: "MongoDB",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Express.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "React.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: assitiveGlasses,
+    source_code_link:
+      "https://github.com/Srikanth-1106/PetShop",
+  },
+  {
+    name: "Update Cars – Automotive Platform (Full Stack)",
+    description:
+      "Developed a full-featured car listing and inventory management web application. Integrated authentication, image uploads, and admin controls. Technologies: MongoDB, Express.js, React.js, Node.js (MERN stack). Also contributed to Instagram content promotion for the platform.",
+    tags: [
+      {
+        name: "MongoDB",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Express.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "React.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Content Creation",
+        color: "purple-text-gradient",
+      },
+    ],
+    image: nextgenChatbot,
+    source_code_link: "https://github.com/Srikanth-1106/UpdateCars-Platform",
+  },
+  {
+    name: "Strategyfox Pvt. Ltd. - WebXR Project",
+    description:
+      "Frontend Intern working on Three.js & Blender for 3D shopping experience. Developed interactive 3D elements and immersive shopping interfaces using modern web technologies.",
+    tags: [
+      {
+        name: "Three.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Blender",
+        color: "green-text-gradient",
+      },
+      {
+        name: "WebXR",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: jobconnect,
+    source_code_link: "https://github.com/Srikanth-1106/WebXR-Project",
+  },
+  {
+    name: "Content Creation - Kaadhu Kuthu Channel",
+    description:
+      "Content Creator for Instagram channel @kaadhu_kuthu, helped grow the channel to 140K+ followers. Created engaging content and managed social media presence.",
+    tags: [
+      {
+        name: "Content Creation",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Social Media",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Instagram",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Digital Marketing",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: boneFracture,
+    source_code_link: "https://www.instagram.com/kaadhu_kuthu/",
+  },
+];
+
+export {
+  navLinks,
+  sequenceText,
+  socials,
+  services,
+  technologies,
+  education,
+  projects,
+};
