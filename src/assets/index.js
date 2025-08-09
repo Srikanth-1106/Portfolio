@@ -36,6 +36,7 @@ import colab from "./skills/colab.png";
 // Education logos
 import ssnLogo from "./education/ssnLogo.png";
 import tptLogo from "./TPT LOGO.jpeg";
+import notreDameLogo from "./education/notreDameLogo.png";
 
 // Experience icons
 import contentCreator from "./experiences/content-creator.jpeg";
@@ -49,7 +50,10 @@ import nextgenChatbot from "./project/nextgenChatBot.png";
 import assitiveGlasses from "./project/assistiveGlasses.png";
 import jobconnect from "./project/jobconnect.png";
 import internshipPortal from "./project/internshipPortal.png";
-import boneFracture from "./project/boneFracture.png";
+// import boneFracture from "./project/boneFracture.png"; // Removed because file does not exist
+import generatedImage from "./project/generated-image.png";
+import tictactoeImage from "./project/tictactoe.png";
+import updatecarsLogo from "./project/updatecars.png"; // Added new project logo
 
 // Service icons
 import backend from "./service/backend.png";
@@ -96,6 +100,7 @@ export {
   // Education
   ssnLogo,
   tptLogo,
+  notreDameLogo,
 
   // Experiences
   contentCreator,
@@ -109,7 +114,10 @@ export {
   assitiveGlasses,
   jobconnect,
   internshipPortal,
-  boneFracture,
+  // boneFracture, // Removed because file does not exist
+  generatedImage,
+  tictactoeImage,
+  updatecarsLogo,
 
   // Services
   backend,

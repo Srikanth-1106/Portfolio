@@ -28,23 +28,22 @@ import {
 
   ssnLogo,
   tptLogo,
-
   contentCreator,
   sfLogo,
   ucLogo,
   chiselLogo,
-
-  passwordapp,
   nextgenChatbot,
   assitiveGlasses,
   jobconnect,
-  boneFracture,
-
   backend,
   creator,
   mobile,
   web,
   cplusplus,
+  tictactoeImage,
+  generatedImage,
+  updatecarsLogo, // Added new project logo
+  notreDameLogo,
 } from "../assets";
 
 const navLinks = [
@@ -261,6 +260,17 @@ const technologies = {
 
 const education = [
   {
+    title: "Notre Dame Of Holy Cross School CBSE",
+    name: "Schooling (10th Grade)",
+    icon: notreDameLogo,
+  date: "Jun 2019 - Apr 2020",
+    points: [
+      "Completed 10th grade at Notre Dame Of Holy Cross School (CBSE board)",
+      "Percentage: 54%",
+      "Developed foundational skills in mathematics, science, and computer basics."
+    ],
+  },
+  {
     title: "Thiagarajar Polytechnic College",
     name: "Diploma in Computer Science",
     icon: tptLogo,
@@ -378,7 +388,7 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: passwordapp,
+    image: tictactoeImage,
     source_code_link:
       "https://github.com/Srikanth-1106/TicTacToe",
   },
@@ -434,7 +444,7 @@ const projects = [
         color: "purple-text-gradient",
       },
     ],
-    image: nextgenChatbot,
+    image: updatecarsLogo,
     source_code_link: "https://github.com/Srikanth-1106/UpdateCars-Platform",
   },
   {
@@ -463,9 +473,9 @@ const projects = [
     source_code_link: "https://github.com/Srikanth-1106/WebXR-Project",
   },
   {
-    name: "Content Creation - Kaadhu Kuthu Channel",
+    name: "Content Creator - Kaadhu Kuthu Channel",
     description:
-      "Instagram content creation and social media management, growing channel to 140K+ followers.",
+      "Instagram content creation and social media management, growing channel to 140K+ followers. Created engaging content and developed digital marketing strategies.",
     tags: [
       {
         name: "Content Creation",
@@ -484,7 +494,7 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: boneFracture,
+  image: generatedImage,
     source_code_link: "https://www.instagram.com/kaadhu_kuthu/",
   },
 ];
