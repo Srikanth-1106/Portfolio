@@ -14,31 +14,28 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+    const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
-    emailjs.sendForm(
-      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-      formRef.current,
-      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-    )
-    .then(
-      () => {
+      emailjs.sendForm(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
         setLoading(false);
-        alert("Thank you. Your message is sent!");
+        alert('Message sent!');
         setForm({
           name: "",
           email: "",
           message: "",
         });
-      },
-      (error) => {
+      }, (error) => {
         setLoading(false);
         console.error(error);
-        alert("Ahh, something went wrong. Please try again.");
-      }
-    );
+        alert('Failed to send message.');
+      });
   };
 
   const handleChange = (e) => {
@@ -65,7 +62,7 @@ const Contact = () => {
           <form
             ref={formRef}
             className="mt-12 flex flex-col gap-8"
-            onSubmit={handleSubmit}>
+            onSubmit={sendEmail}>
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your Name</span>
               <input

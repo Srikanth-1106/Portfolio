@@ -37,6 +37,11 @@ import colab from "./skills/colab.png";
 import ssnLogo from "./education/ssnLogo.png";
 import tptLogo from "./education/tpt.jpeg";
 
+// Experience icons
+import contentCreator from "./experiences/content-creator.jpeg";
+import sfLogo from "./experiences/SF logo.png";
+import ucLogo from "./experiences/UC.png";
+
 // Project images
 import passwordapp from "./project/passwordManager.png";
 import nextgenChatbot from "./project/nextgenChatBot.png";
@@ -90,6 +95,11 @@ export {
   // Education
   ssnLogo,
   tptLogo,
+
+  // Experiences
+  contentCreator,
+  sfLogo,
+  ucLogo,
 
   // Projects
   passwordapp,

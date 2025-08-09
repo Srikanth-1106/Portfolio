@@ -7,6 +7,7 @@ import {
 import { textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import { experiences } from "../constants";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -46,47 +47,6 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
-  const experiences = [
-    {
-      title: "Frontend Intern – WebXR Project",
-      company: "Strategyfox Pvt. Ltd., Chennai",
-      location: "Chennai, India",
-      date: "May 2025 – Jul 2025",
-      icon: "src/assets/experiences/SF%20logo.png",
-      points: [
-        "Developed interactive 3D elements using Three.js and Blender for 3D shopping experience",
-        "Created immersive shopping interfaces using modern web technologies",
-        "Collaborated with design and development teams to implement WebXR features",
-        "Gained hands-on experience with 3D modeling and web development integration"
-      ],
-    },
-    {
-      title: "Full Stack Developer",
-      company: "UpdateCars Pvt. Ltd., Salem",
-      location: "Salem, India",
-      date: "Mar 2024 – Present",
-      icon: "src/assets/experiences/UC.png",
-      points: [
-        "Developed full-featured car listing and inventory management web application",
-        "Integrated authentication, image uploads, and admin controls using MERN stack",
-        "Technologies: MongoDB, Express.js, React.js, Node.js",
-        "Also contributed to Instagram content promotion for the platform"
-      ],
-    },
-    {
-      title: "Content Creator",
-      company: "Kaadhu Kuthu Channel",
-      location: "Remote",
-      date: "Apr 2024 – Present",
-      icon: "src/assets/experiences/content-creator.jpeg",
-      points: [
-        "Content Creator for Instagram channel @kaadhu_kuthu",
-        "Helped grow the channel to 140K+ followers",
-        "Created engaging content and managed social media presence",
-        "Developed skills in digital marketing and content strategy"
-      ],
-    },
-  ];
 
   return (
     <>
