@@ -260,17 +260,6 @@ const technologies = {
 
 const education = [
   {
-    title: "SSN College of Engineering",
-    name: "B.E. in Computer Science and Engineering",
-    icon: ssnLogo,
-    date: "Sep 2023 - Present",
-    points: [
-      "Currently pursuing Bachelor of Engineering in Computer Science and Engineering",
-      "CGPA: 6.1 / 10",
-      "Studying core computer science subjects including Data Structures, Algorithms, Database Management Systems, and Software Engineering."
-    ],
-  },
-  {
     title: "Thiagarajar Polytechnic College",
     name: "Diploma in Computer Science",
     icon: tptLogo,
@@ -279,6 +268,17 @@ const education = [
       "Completed Diploma in Computer Science with excellent academic performance",
       "Percentage: 87.4%",
       "Gained strong foundation in programming, web development, and computer science fundamentals."
+    ],
+  },
+  {
+    title: "SSN College of Engineering",
+    name: "B.E. in Computer Science and Engineering",
+    icon: ssnLogo,
+    date: "Sep 2023 - Present",
+    points: [
+      "Currently pursuing Bachelor of Engineering in Computer Science and Engineering",
+      "CGPA: 6.1 / 10",
+      "Studying core computer science subjects including Data Structures, Algorithms, Database Management Systems, and Software Engineering."
     ],
   },
 ];
