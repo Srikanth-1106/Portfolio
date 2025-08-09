@@ -35,12 +35,13 @@ import colab from "./skills/colab.png";
 
 // Education logos
 import ssnLogo from "./education/ssnLogo.png";
-import tptLogo from "./education/tpt.jpeg";
+import tptLogo from "./TPT LOGO.jpeg";
 
 // Experience icons
 import contentCreator from "./experiences/content-creator.jpeg";
 import sfLogo from "./experiences/SF logo.png";
 import ucLogo from "./experiences/UC.png";
+import chiselLogo from "./experiences/chisel-logo.png";
 
 // Project images
 import passwordapp from "./project/passwordManager.png";
@@ -100,6 +101,7 @@ export {
   contentCreator,
   sfLogo,
   ucLogo,
+  chiselLogo,
 
   // Projects
   passwordapp,

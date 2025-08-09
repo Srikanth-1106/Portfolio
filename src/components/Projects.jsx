@@ -62,11 +62,11 @@ const ProjectCard = ({
 const Projects = () => {
   return (
     <section
-      className="container mx-auto px-4 md:px-6 lg:px-12 xl:px-24 pt-2 md:pt-4 lg:pt-6"
+      className="container mx-auto px-4 md:px-6 lg:px-12 xl:px-24 pt-2 md:pt-4 lg:pt-6 scroll-mt-20"
       id="projects">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} pl-0 md:pl-8`}>MY WORK</p>
-        <h2 className={`${styles.sectionHeadText} pl-0 md:pl-8`}>Projects</h2>
+        <h2 className={`${styles.sectionHeadText} border-l-4 border-[#00cea8] pl-6 md:pl-6`}>Projects</h2>
       </motion.div>
       <div className="w-full flex">
         <motion.p

@@ -17,12 +17,13 @@ const ServiceCard = ({ index, title, icon }) => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card mirror-effect crystal-shine"
+        style={{ '--animation-delay': `${index * 0.5}s` }}>
         <div
           options={{ max: 45, scale: 1, speed: 450 }}
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[240px] w-[240px] flex justify-evenly items-center flex-col">
-          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className="text-white text-[20px] font-bold text-center">
+          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[240px] w-[240px] flex justify-evenly items-center flex-col relative z-10">
+          <img src={icon} alt={title} className="w-16 h-16 object-contain relative z-20" />
+          <h3 className="text-white text-[20px] font-bold text-center relative z-20">
             {title}
           </h3>
         </div>
@@ -34,13 +35,13 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = ({ isMobile }) => {
   return (
     <section
-      className="md:container md:mx-auto md:px-6 lg:px-12 xl:px-24 md:pt-4 lg:pt-6"
+      className="md:container md:mx-auto md:px-6 lg:px-12 xl:px-24 md:pt-4 lg:pt-6 scroll-mt-20"
       id="about">
       <div className="md:flex md:flex-row md:item-center md:justify-center md:gap-10 lg:gap-14">
         <div className="md:flex-1 md:max-w-2xl lg:max-w-3xl md:pt-12">
           <motion.div variants={textVariant()}>
             <p className={styles.sectionSubText}>Introduction</p>
-            <h2 className={styles.sectionHeadText}>Overview</h2>
+            <h2 className={`${styles.sectionHeadText} border-l-4 border-[#00cea8] pl-6`}>About</h2>
           </motion.div>
           <motion.div
             variants={fadeIn("", "", 0.1, 1)}

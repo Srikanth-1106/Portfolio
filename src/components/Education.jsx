@@ -47,8 +47,8 @@ const EducationCard = ({ education }) => {
 const Education = () => {
   return (
     <>
-      <motion.div variants={textVariant()} id="education">
-        <h2 className={styles.sectionHeadText}>Education</h2>
+      <motion.div variants={textVariant()} id="education" className="scroll-mt-20">
+        <h2 className={`${styles.sectionHeadText} border-l-4 border-[#00cea8] pl-6`}>Education</h2>
       </motion.div>
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>

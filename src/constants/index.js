@@ -32,6 +32,7 @@ import {
   contentCreator,
   sfLogo,
   ucLogo,
+  chiselLogo,
 
   passwordapp,
   nextgenChatbot,
@@ -95,12 +96,12 @@ const socials = [
   {
     id: "linkedin",
     icon: linkedin,
-    link: "https://www.linkedin.com/in/srikanthatssn",
+    link: "https://www.linkedin.com/in/srikanthatssn/",
   },
   {
     id: "instagram",
     icon: instagram,
-    link: "https://www.instagram.com/kaadhu_kuthu/",
+    link: "https://www.instagram.com/____.srikanth.____/",
   },
 ];
 
@@ -327,9 +328,38 @@ const experiences = [
 
 const projects = [
   {
+    name: "Chisel Recruiter Management System (Full Stack)",
+    description:
+      "Full-stack recruiter management system with secure authentication, job posting dashboard, and real-time notifications using MERN stack.",
+    tags: [
+      {
+        name: "MongoDB",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Express.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "React.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Authentication",
+        color: "purple-text-gradient",
+      },
+    ],
+    image: chiselLogo,
+    source_code_link: "https://github.com/Srikanth-1106/Chisel-Recruiter-System",
+  },
+  {
     name: "TicTacToe Game (Front End)",
     description:
-      "Interactive React.js game with modern UI and smooth animations. Features include game state management, win detection, and responsive design for all devices.",
+      "Interactive React.js game with modern UI, smooth animations, and responsive design for all devices.",
     tags: [
       {
         name: "React.js",
@@ -355,7 +385,7 @@ const projects = [
   {
     name: "Pet Adoption Website (Full Stack)",
     description:
-      "Pet adoption and product listing MERN app with admin/user features. Includes user authentication, pet listings, admin dashboard, and responsive design.",
+      "Pet adoption platform with user authentication, admin dashboard, and responsive design using MERN stack.",
     tags: [
       {
         name: "MongoDB",
@@ -381,7 +411,7 @@ const projects = [
   {
     name: "Update Cars – Automotive Platform (Full Stack)",
     description:
-      "Developed a full-featured car listing and inventory management web application. Integrated authentication, image uploads, and admin controls. Technologies: MongoDB, Express.js, React.js, Node.js (MERN stack). Also contributed to Instagram content promotion for the platform.",
+      "Car listing and inventory management platform with authentication, image uploads, and admin controls using MERN stack.",
     tags: [
       {
         name: "MongoDB",
@@ -410,7 +440,7 @@ const projects = [
   {
     name: "Strategyfox Pvt. Ltd. - WebXR Project",
     description:
-      "Frontend Intern working on Three.js & Blender for 3D shopping experience. Developed interactive 3D elements and immersive shopping interfaces using modern web technologies.",
+      "3D shopping experience with interactive elements using Three.js, Blender, and modern web technologies.",
     tags: [
       {
         name: "Three.js",
@@ -435,7 +465,7 @@ const projects = [
   {
     name: "Content Creation - Kaadhu Kuthu Channel",
     description:
-      "Content Creator for Instagram channel @kaadhu_kuthu, helped grow the channel to 140K+ followers. Created engaging content and managed social media presence.",
+      "Instagram content creation and social media management, growing channel to 140K+ followers.",
     tags: [
       {
         name: "Content Creation",

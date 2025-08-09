@@ -13,6 +13,79 @@
   color-scheme: dark;
 }
 
+/* Mirror Crystal Effect */
+@keyframes mirrorSweep {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.mirror-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.mirror-effect::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 60%,
+    transparent 70%
+  );
+  animation: mirrorSweep 3s ease-in-out infinite;
+  animation-delay: var(--animation-delay, 0s);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mirror-effect:hover::before {
+  animation-duration: 1.5s;
+}
+
+/* Crystal shine effect */
+.crystal-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.crystal-shine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 206, 168, 0.2),
+    rgba(191, 97, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.crystal-shine:hover::after {
+  left: 100%;
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

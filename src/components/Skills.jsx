@@ -66,7 +66,7 @@ const Skills = () => {
   ));
 
   return (
-    <section className="w-full h-fit p-6 sm:p-8 mt-20" id="skills">
+    <section className="w-full h-fit p-6 sm:p-8 mt-20 scroll-mt-20" id="skills">
       <motion.div
         variants={textVariant()}
         initial="hidden"
@@ -74,7 +74,7 @@ const Skills = () => {
         viewport={{ once: true, amount: 0.25 }}
         className="text-center mx-auto">
         <p className={styles.sectionSubText}>What I have learnt so far</p>
-        <h2 className={styles.sectionHeadText}>Skills</h2>
+        <h2 className={`${styles.sectionHeadText} border-l-4 border-[#00cea8] pl-6`}>Skills</h2>
       </motion.div>
 
       <div className="flex justify-center w-full">
