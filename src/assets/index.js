@@ -43,6 +43,8 @@ import contentCreator from "./experiences/content-creator.jpeg";
 import sfLogo from "./experiences/SF logo.png";
 import ucLogo from "./experiences/UC.png";
 import chiselLogo from "./experiences/chisel-logo.png";
+import catLogo from "./project/cat.png"; 
+import devLogo from "./project/dev.png";
 
 // Project images
 import passwordapp from "./project/passwordManager.png";
@@ -107,6 +109,8 @@ export {
   sfLogo,
   ucLogo,
   chiselLogo,
+  catLogo,
+  devLogo,
 
   // Projects
   passwordapp,

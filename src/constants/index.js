@@ -32,8 +32,6 @@ import {
   sfLogo,
   ucLogo,
   chiselLogo,
-  nextgenChatbot,
-  assitiveGlasses,
   jobconnect,
   backend,
   creator,
@@ -44,6 +42,8 @@ import {
   generatedImage,
   updatecarsLogo, // Added new project logo
   notreDameLogo,
+  catLogo,
+  devLogo,
 } from "../assets";
 
 const navLinks = [
@@ -363,7 +363,7 @@ const projects = [
         color: "purple-text-gradient",
       },
     ],
-    image: chiselLogo,
+    image: devLogo,
     source_code_link: "https://github.com/Srikanth-1106/Chisel-Recruiter-System",
   },
   {
@@ -414,7 +414,7 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: assitiveGlasses,
+    image: catLogo,
     source_code_link:
       "https://github.com/Srikanth-1106/PetShop",
   },
