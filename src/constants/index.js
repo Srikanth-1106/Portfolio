@@ -32,18 +32,12 @@ import {
   sfLogo,
   ucLogo,
   chiselLogo,
-  jobconnect,
   backend,
   creator,
   mobile,
   web,
   cplusplus,
-  tictactoeImage,
-  generatedImage,
-  updatecarsLogo, // Added new project logo
   notreDameLogo,
-  catLogo,
-  devLogo,
 } from "../assets";
 
 const navLinks = [
@@ -263,7 +257,7 @@ const education = [
     title: "Notre Dame Of Holy Cross School CBSE",
     name: "Schooling (10th Grade)",
     icon: notreDameLogo,
-  date: "Jun 2019 - Apr 2020",
+    date: "Jun 2019 - Apr 2020",
     points: [
       "Completed 10th grade at Notre Dame Of Holy Cross School (CBSE board)",
       "Percentage: 54%",
@@ -288,7 +282,7 @@ const education = [
     date: "Sep 2023 - Present",
     points: [
       "Currently pursuing Bachelor of Engineering in Computer Science and Engineering",
-      "CGPA: 6.1 / 10",
+      "CGPA: 6.34 / 10",
       "Studying core computer science subjects including Data Structures, Algorithms, Database Management Systems, and Software Engineering."
     ],
   },
@@ -338,126 +332,62 @@ const experiences = [
 
 const projects = [
   {
-    name: "Chisel Recruiter Management System (Full Stack)",
+    name: "Water Quality Optimization Digital Twin",
     description:
-      "Full-stack recruiter management system with secure authentication, job posting dashboard, and real-time notifications using MERN stack.",
+      "Built a machine learning control system simulating an industrial wastewater treatment plant to optimize chemical dosing and aeration. Implemented Champion/Challenger model selection, projecting annual operational savings of $98K while ensuring environmental compliance.",
     tags: [
       {
-        name: "MongoDB",
+        name: "Python",
         color: "blue-text-gradient",
       },
       {
-        name: "Express.js",
+        name: "Scikit-Learn",
         color: "green-text-gradient",
       },
       {
-        name: "React.js",
+        name: "Random Forest",
         color: "pink-text-gradient",
+      },
+      {
+        name: "Gradient Boosting",
+        color: "orange-text-gradient",
+      },
+    ],
+
+    source_code_link: "https://github.com/Srikanth-1106",
+  },
+  {
+    name: "Plastic Injection Molding Quality Control",
+    description:
+      "Developed RegressorChain and Gradient Boosting models on synthetic time-series data to predict manufacturing quality metrics. Conducted dual-noise dataset analysis (5% vs 15%) to evaluate model robustness and optimize hyperparameters using GridSearchCV.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Pandas",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Scikit-Learn",
+        color: "pink-text-gradient",
+      },
+    ],
+
+    source_code_link: "https://github.com/Srikanth-1106",
+  },
+  {
+    name: "Virtual AI Interviewer Platform",
+    description:
+      "Engineered a Progressive Web App (PWA) configured for offline functionality and seamless cross-platform installation. Integrated WebXR support for Meta Quest VR headsets to provide an immersive, one-on-one virtual interview environment.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
       },
       {
         name: "Node.js",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "Authentication",
-        color: "purple-text-gradient",
-      },
-    ],
-    image: devLogo,
-    source_code_link: "https://github.com/Srikanth-1106/Chisel-Recruiter-System",
-  },
-  {
-    name: "TicTacToe Game (Front End)",
-    description:
-      "Interactive React.js game with modern UI, smooth animations, and responsive design for all devices.",
-    tags: [
-      {
-        name: "React.js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "HTML",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: tictactoeImage,
-    source_code_link:
-      "https://github.com/Srikanth-1106/TicTacToe",
-  },
-  {
-    name: "Pet Adoption Website (Full Stack)",
-    description:
-      "Pet adoption platform with user authentication, admin dashboard, and responsive design using MERN stack.",
-    tags: [
-      {
-        name: "MongoDB",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Express.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "React.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Node.js",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: catLogo,
-    source_code_link:
-      "https://github.com/Srikanth-1106/PetShop",
-  },
-  {
-    name: "Update Cars – Automotive Platform (Full Stack)",
-    description:
-      "Car listing and inventory management platform with authentication, image uploads, and admin controls using MERN stack.",
-    tags: [
-      {
-        name: "MongoDB",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Express.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "React.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Node.js",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "Content Creation",
-        color: "purple-text-gradient",
-      },
-    ],
-    image: updatecarsLogo,
-    source_code_link: "https://github.com/Srikanth-1106/UpdateCars-Platform",
-  },
-  {
-    name: "Strategyfox Pvt. Ltd. - WebXR Project",
-    description:
-      "3D shopping experience with interactive elements using Three.js, Blender, and modern web technologies.",
-    tags: [
-      {
-        name: "Three.js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Blender",
         color: "green-text-gradient",
       },
       {
@@ -465,37 +395,100 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "JavaScript",
+        name: "PWA",
         color: "orange-text-gradient",
       },
     ],
-    image: jobconnect,
-    source_code_link: "https://github.com/Srikanth-1106/WebXR-Project",
+
+    source_code_link: "https://github.com/Srikanth-1106",
   },
   {
-    name: "Content Creator - Kaadhu Kuthu Channel",
+    name: "Tamil Movie Metadata OCR Extractor",
     description:
-      "Instagram content creation and social media management, growing channel to 140K+ followers. Created engaging content and developed digital marketing strategies.",
+      "Automated data extraction from images of Tamil movies utilizing Python and OCR technology. Integrated the TMDB API to fetch, cross-reference, and structure comprehensive movie details dynamically.",
     tags: [
       {
-        name: "Content Creation",
+        name: "Python",
         color: "blue-text-gradient",
       },
       {
-        name: "Social Media",
+        name: "TMDB API",
         color: "green-text-gradient",
       },
       {
-        name: "Instagram",
+        name: "OCR",
+        color: "pink-text-gradient",
+      },
+    ],
+
+    source_code_link: "https://github.com/Srikanth-1106",
+  },
+  {
+    name: "R3F Virtual Group Discussion Platform",
+    description:
+      "Created an interactive 3D virtual group discussion space leveraging React Three Fiber for complex scene rendering. Integrated real-time backend synchronization to manage concurrent participant interactions and spatial presence.",
+    tags: [
+      {
+        name: "React Three Fiber",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "3D/WebXR",
+        color: "pink-text-gradient",
+      },
+    ],
+
+    source_code_link: "https://github.com/Srikanth-1106",
+  },
+  {
+    name: "Chisel Yourself – Personal Development Platform",
+    description:
+      "Deployed a scalable content delivery platform utilizing CDN optimization to achieve sub-3s global load times. Developed structured learning paths with progression tracking, boosting user engagement and completion rates by 20%.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Supabase",
         color: "pink-text-gradient",
       },
       {
-        name: "Digital Marketing",
+        name: "GCP",
         color: "orange-text-gradient",
       },
     ],
-  image: generatedImage,
-    source_code_link: "https://www.instagram.com/kaadhu_kuthu/",
+
+    source_code_link: "https://github.com/Srikanth-1106",
+  },
+  {
+    name: "Update Cars – Dealer Inventory Platform",
+    description:
+      "Delivered an inventory management system featuring real-time stock status, reducing data discrepancies by 90%. Streamlined database administration for vehicle records and implemented secure payment integrations.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Supabase",
+        color: "pink-text-gradient",
+      },
+    ],
+
+    source_code_link: "https://github.com/Srikanth-1106",
   },
 ];
 

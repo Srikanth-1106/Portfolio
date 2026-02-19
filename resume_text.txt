@@ -1,0 +1,87 @@
+Srikanth Senthilkumar
+Software Developer
+Chennai, India
+—
++91 63799 25198
+senthilsri1106@gmail.com
+—
+LinkedIn
+—
+GitHub
+—
+Portfolio
+Professional Summary
+Aspiring Software Developer with a strong foundation in Programming, Information Systems, and Systems Analysis.
+Expert in full-cycle Application Development, Database administration, and adhering to Industry standards. Committed
+to Ethical engineering practices, sound Judgements, and driving measurable System enhancements for enterprise clients.
+Technical Skills
+Core Competencies: Systems Analysis, Database administration, Center operations, Application Development, Net-
+work operations, Data center Management, Industry standards, Programming.
+Frontend & Programming: Next.js, React.js, Tailwind CSS, UI/UX, WebSockets, Accessibility, SEO.
+Backend & Cloud: Node.js, Express.js, Supabase, Firebase, GCP, REST APIs.
+Languages: JavaScript, TypeScript, Dart, Python, Java, C.
+Tools: Git/GitHub, GitHub Actions, VS Code, Android Studio, MongoDB, Oracle SQL, Power BI.
+Experience
+DreamPi (dreampi.in)
+Jun 2025 – Present
+Lead Frontend and Full-Stack Engineer
+• Led the Application Development of production-grade Business applications using Next.js and GCP, resulting in a
+25% increase in user engagement.
+• Managed Center operations workflows and performed critical Database administration on Supabase, optimizing index-
+ing strategies to reduce query latency by 40%.
+• Executed System enhancements and structured Programming logic to optimize Core Web Vitals, maintaining consistent
+Lighthouse scores above 90.
+Strategyfox Pvt. Ltd., Chennai
+May 2025 – Jul 2025
+Frontend Intern – WebXR Project
+• Developed immersive Information Systems using React and Three.js Programming, improving scene loading perfor-
+mance by 30%.
+• Enhanced scene optimization using Industry standards, reducing asset load times by 1.5 seconds.
+Projects
+Water Quality Optimization Digital TwinPython, Scikit-Learn, Random Forest, Gradient Boosting
+• Built a machine learning control system simulating an industrial wastewater treatment plant to optimize chemical
+dosing and aeration.
+• Implemented Champion/Challenger model selection, projecting annual operational savings of $98K while ensuring
+environmental compliance.
+Plastic Injection Molding Quality ControlPython, Pandas, Scikit-Learn
+• Developed RegressorChain and Gradient Boosting models on synthetic time-series data to predict manufacturing
+quality metrics.
+• Conducted dual-noise dataset analysis (5% vs 15%) to evaluate model robustness and optimize hyperparameters using
+GridSearchCV.
+Virtual AI Interviewer PlatformReact, Node.js, WebXR, PWA
+• Engineered a Progressive Web App (PWA) configured for offline functionality and seamless cross-platform installation.
+• Integrated WebXR support for Meta Quest VR headsets to provide an immersive, one-on-one virtual interview envi-
+ronment.
+Tamil Movie Metadata OCR ExtractorPython, TMDB API, Optical Character Recognition
+• Automated data extraction from images of Tamil movies utilizing Python and OCR technology.
+• Integrated the TMDB API to fetch, cross-reference, and structure comprehensive movie details dynamically.
+R3F Virtual Group Discussion PlatformReact Three Fiber, Node.js, 3D/WebXR
+• Created an interactive 3D virtual group discussion space leveraging React Three Fiber for complex scene rendering.
+• Integrated real-time backend synchronization to manage concurrent participant interactions and spatial presence.
+Chisel Yourself – Personal Development PlatformNext.js, Node.js, Supabase, GCP
+• Deployed a scalable content delivery platform utilizing CDN optimization to achieve sub-3s global load times.
+• Developed structured learning paths with progression tracking, boosting user engagement and completion rates by
+20%.
+Update Cars – Dealer Inventory PlatformNext.js, Node.js, Supabase
+• Delivered an inventory management system featuring real-time stock status, reducing data discrepancies by 90%.
+• Streamlined database administration for vehicle records and implemented secure payment integrations.
+Education
+SSN College of Engineering
+Sep 2023 – Present
+B.E. in Computer Science and Engineering — CGPA: 6.343
+Thiagarajar Polytechnic College
+Nov 2020 – Jun 2023
+Diploma in Computer Science — Percentage: 87.4%
+Courses and Certifications
+• Introduction to Industry 4.0 and Industrial Internet of Things
+• Affective Computing
+—
+Privacy and Security
+• Google GEN AI Study Jams
+—
+Foundations of User Experience Design(Google)
+Extra-Curricular and Leadership
+• National-Level Cricket Athlete: Demonstrated teamwork, discipline, and composure under pressure.
+• District Athletics Champion: Consistent top performer across multiple track and field events.
+• 400m Hurdles Record (1:02): Proven endurance and focus through continuous performance improvement.
+• Karate Black Belt: Showcased commitment, leadership, and structured practice discipline.
