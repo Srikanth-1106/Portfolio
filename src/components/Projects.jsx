@@ -11,7 +11,6 @@ const ProjectCard = ({
   name,
   description,
   tags,
-  image,
   source_code_link,
 }) => {
   return (
@@ -22,30 +21,23 @@ const ProjectCard = ({
       viewport={{ once: true, amount: 0.25 }}>
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 h-[550px] rounded-2xl w-full sm:w-[290px] md:w-[310px] lg:w-[330px] xl:w-[360px]">
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-          {source_code_link.includes('github.com') && (
-            <div className="absolute inset-0 flex justify-end m-3 opacity-100 ">
+        className="bg-tertiary p-5 rounded-2xl w-full sm:w-[290px] md:w-[310px] lg:w-[330px] xl:w-[360px] flex flex-col justify-between min-h-[320px]">
+        <div>
+          <div className="flex items-center justify-between">
+            <h3 className="text-white font-bold text-[22px] leading-tight flex-1">{name}</h3>
+            {source_code_link.includes('github.com') && (
               <div
                 onClick={() => window.open(source_code_link, "_blank")}
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ml-3 flex-shrink-0">
                 <img
                   src={github}
                   alt="source"
                   className="w-1/2 h-1/2 object-contain"
                 />
               </div>
-            </div>
-          )}
-        </div>
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+            )}
+          </div>
+          <p className="mt-3 text-secondary text-[14px] leading-[22px]">{description}</p>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
