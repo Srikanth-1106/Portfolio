@@ -6,6 +6,7 @@ import Skills from './Skills';
 import Education from './Education';
 import Experience from './Experience';
 import Projects from './Projects';
+import Certifications from './Certifications';
 import Contact from './Contact';
 
 export {
@@ -16,8 +17,9 @@ export {
   Education,
   Experience,
   Projects,
+  Certifications,
   Contact,
   EarthCanvas, 
   ComputersCanvas, 
   StarsCanvas
-}
+};

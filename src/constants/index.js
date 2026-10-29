@@ -25,9 +25,20 @@ import {
   express,
   gcp,
   colab,
+  aws,
+  githubactions,
+  terraform,
+  nextjs,
+  supabase,
+  bash,
+  powerbi,
+  vscode,
+  kubernetes,
 
   ssnLogo,
   tptLogo,
+  chargebeeLogo,
+  dreampiLogo,
   contentCreator,
   sfLogo,
   ucLogo,
@@ -62,19 +73,29 @@ const navLinks = [
     title: "Projects",
   },
   {
+    id: "certifications",
+    title: "Certifications",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
 ];
 
 const sequenceText = [
+  "Cloud / DevOps Engineer",
+  1200,
+  "Software Engineer",
+  1000,
   "Full Stack Developer",
   1000,
-  "Flutter Developer",
-  1000,
+  "AWS & CI/CD Specialist",
+  1200,
   "<ReactJs Developer />",
   1000,
   "MERN Stack Developer",
+  1000,
+  "Flutter Developer",
   1000,
   "Problem Solver",
   1000,
@@ -100,6 +121,18 @@ const socials = [
 
 const services = [
   {
+    title: "Cloud & DevOps",
+    icon: backend,
+  },
+  {
+    title: "Software Engineer",
+    icon: web,
+  },
+  {
+    title: "Backend Developer",
+    icon: backend,
+  },
+  {
     title: "Web Developer",
     icon: web,
   },
@@ -108,68 +141,88 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
     title: "Flutter Developer",
     icon: creator,
   },
 ];
 
 const technologies = {
+  cloud: [
+    {
+      name: "AWS",
+      icon: aws,
+      link: "https://aws.amazon.com/",
+    },
+    {
+      name: "Google Cloud Platform",
+      icon: gcp,
+      link: "https://cloud.google.com/",
+    },
+  ],
+  devops: [
+    {
+      name: "GitHub Actions",
+      icon: githubactions,
+      link: "https://github.com/features/actions",
+    },
+    {
+      name: "Docker & Buildx",
+      icon: docker,
+      link: "https://www.docker.com/",
+    },
+    {
+      name: "Terraform (IaC)",
+      icon: terraform,
+      link: "https://www.terraform.io/",
+    },
+    {
+      name: "Kubernetes",
+      icon: kubernetes,
+      link: "https://kubernetes.io/",
+    },
+    {
+      name: "Git",
+      icon: git,
+      link: "https://git-scm.com/",
+    },
+    {
+      name: "GitHub",
+      icon: github,
+      link: "https://github.com/",
+    },
+  ],
   languages: [
-    {
-      name: "HTML5",
-      icon: html,
-      link: "https://html.spec.whatwg.org/multipage/",
-    },
-    {
-      name: "CSS3",
-      icon: css,
-      link: "https://www.w3.org/Style/CSS/Overview.en.html",
-    },
-    {
-      name: "JavaScript",
-      icon: javascript,
-      link: "https://262.ecma-international.org/",
-    },
-    {
-      name: "TypeScript",
-      icon: typescript,
-      link: "https://www.typescriptlang.org/",
-    },
-    {
-      name: "C",
-      icon: c,
-      link: "https://en.cppreference.com/w/c",
-    },
-    {
-      name: "C++",
-      icon: cplusplus,
-      link: "https://cplusplus.com/",
-    },
-    {
-      name: "Java",
-      icon: java,
-      link: "https://www.java.com/en/",
-    },
     {
       name: "Python",
       icon: python,
       link: "https://www.python.org/",
     },
+    {
+      name: "Bash",
+      icon: bash,
+      link: "https://www.gnu.org/software/bash/",
+    },
   ],
   frameworks: [
     {
-      name: "TailwindCSS",
-      icon: tailwind,
-      link: "https://tailwindcss.com/",
+      name: "Next.js",
+      icon: nextjs,
+      link: "https://nextjs.org/",
+    },
+    {
+      name: "React.js",
+      icon: reactjs,
+      link: "https://react.dev/",
     },
     {
       name: "Express.js",
       icon: express,
       link: "https://expressjs.com/",
+    },
+    {
+      name: "TailwindCSS",
+      icon: tailwind,
+      link: "https://tailwindcss.com/",
     },
     {
       name: "Flutter",
@@ -191,9 +244,9 @@ const technologies = {
   ],
   databases: [
     {
-      name: "MySQL",
-      icon: mysql,
-      link: "https://www.mysql.com/",
+      name: "Supabase",
+      icon: supabase,
+      link: "https://supabase.com/",
     },
     {
       name: "PostgreSQL",
@@ -205,17 +258,17 @@ const technologies = {
       icon: mongodb,
       link: "https://www.mongodb.com/",
     },
+    {
+      name: "MySQL",
+      icon: mysql,
+      link: "https://www.mysql.com/",
+    },
   ],
   tools: [
     {
-      name: "Git",
-      icon: git,
-      link: "https://git-scm.com/",
-    },
-    {
-      name: "GitHub",
-      icon: github,
-      link: "https://github.com/",
+      name: "VS Code",
+      icon: vscode,
+      link: "https://code.visualstudio.com/",
     },
     {
       name: "Postman",
@@ -228,9 +281,14 @@ const technologies = {
       link: "https://www.figma.com/",
     },
     {
-      name: "Docker",
-      icon: docker,
-      link: "https://www.docker.com/",
+      name: "Power BI",
+      icon: powerbi,
+      link: "https://powerbi.microsoft.com/",
+    },
+    {
+      name: "Google Colab",
+      icon: colab,
+      link: "https://colab.research.google.com/",
     },
   ],
   environments: [
@@ -254,41 +312,61 @@ const technologies = {
 
 const education = [
   {
-    title: "Notre Dame Of Holy Cross School CBSE",
-    name: "Schooling (10th Grade)",
-    icon: notreDameLogo,
-    date: "Jun 2019 - Apr 2020",
+    title: "SSN College of Engineering",
+    name: "B.E. in Computer Science and Engineering",
+    icon: ssnLogo,
+    date: "Sep 2023 – Apr 2026",
     points: [
-      "Completed 10th grade at Notre Dame Of Holy Cross School (CBSE board)",
-      "Percentage: 54%",
-      "Developed foundational skills in mathematics, science, and computer basics."
+      "Completed Bachelor of Engineering in Computer Science and Engineering",
+      "CGPA: 6.5%",
+      "Studied core computer science subjects including Cloud Infrastructure, Distributed Systems, Operating Systems, Database Management Systems, and Software Engineering."
     ],
   },
   {
     title: "Thiagarajar Polytechnic College",
     name: "Diploma in Computer Science",
     icon: tptLogo,
-    date: "Nov 2020 - Jun 2023",
+    date: "Nov 2020 – Jun 2023",
     points: [
       "Completed Diploma in Computer Science with excellent academic performance",
       "Percentage: 87.4%",
-      "Gained strong foundation in programming, web development, and computer science fundamentals."
+      "Gained strong foundation in programming, web development, data structures, and computer science fundamentals."
     ],
   },
   {
-    title: "SSN College of Engineering",
-    name: "B.E. in Computer Science and Engineering",
-    icon: ssnLogo,
-    date: "Sep 2023 - Present",
+    title: "Notre Dame Of Holy Cross School CBSE",
+    name: "Schooling (10th Grade)",
+    icon: notreDameLogo,
+    date: "Jun 2019 – Apr 2020",
     points: [
-      "Currently pursuing Bachelor of Engineering in Computer Science and Engineering",
-      "CGPA: 6.34 / 10",
-      "Studying core computer science subjects including Data Structures, Algorithms, Database Management Systems, and Software Engineering."
+      "Completed 10th grade at Notre Dame Of Holy Cross School (CBSE board)",
+      "Percentage: 54%",
+      "Developed foundational skills in mathematics, science, and computer basics."
     ],
   },
 ];
 
 const experiences = [
+  {
+    title: "Cloud Engineer Intern",
+    company: "ChargeBee",
+    location: "Chennai, India",
+    date: "Apr 2026 – Oct 2026",
+    icon: chargebeeLogo,
+    iconBg: "#ffffff",
+    points: [
+      "Worked on AWS cloud infrastructure and DevOps automation involving Amazon ECR, ECS, IAM, CloudWatch, GitHub Actions, Docker, Terraform, and AWS FIS.",
+      "Contributed to the migration of CI/CD workflows from AWS CodePipeline to GitHub Actions, improving workflow flexibility and centralizing build, validation, approval, and deployment automation.",
+      "Developed and enhanced GitHub Actions workflows for Docker image build, versioning, validation, tagging, and publishing to Amazon ECR.",
+      "Implemented an ECR cross-region image push workflow to distribute container images across corresponding AWS regions, improving deployment reliability and disaster recovery readiness.",
+      "Used Docker Buildx to support container image build and publishing workflows across multiple AWS regions.",
+      "Implemented secure CI/CD authentication using GitHub OIDC and AWS IAM roles, avoiding long-lived AWS access keys in GitHub Actions workflows.",
+      "Developed an AWS Fault Injection Service (FIS) disaster recovery automation framework to execute predefined failure scenarios and validate recovery of ECS-based workloads.",
+      "Automated DR drill activities including failure injection, ECS recovery validation, CloudWatch-based monitoring, and result collection, reducing dependency on manual operational procedures.",
+      "Used Terraform and AWS infrastructure concepts to understand, provision, and manage cloud resources through Infrastructure as Code.",
+      "Troubleshot CI/CD and AWS infrastructure issues by analyzing GitHub Actions workflows, container images, AWS resources, logs, and application behavior to identify root causes and implement fixes."
+    ],
+  },
   {
     title: "Frontend Intern – WebXR Project",
     company: "Strategyfox Pvt. Ltd., Chennai",
@@ -303,10 +381,23 @@ const experiences = [
     ],
   },
   {
-    title: "Full Stack Developer",
+    title: "Freelancer",
+    company: "DreamPi",
+    location: "Chennai, India",
+    date: "Jan 2025 – Mar 2025",
+    icon: dreampiLogo,
+    iconBg: "#0c0620",
+    points: [
+      "Developed production web applications using Next.js, React, Node.js, REST APIs, and Supabase.",
+      "Designed backend APIs and database workflows for application features, including authentication, data management, and server-side operations.",
+      "Optimized database queries and application performance through indexing, API optimization, and efficient frontend rendering."
+    ],
+  },
+  {
+    title: "Freelancer",
     company: "UpdateCars Pvt. Ltd., Salem",
     location: "Salem, India",
-    date: "Mar 2024 – Present",
+    date: "Mar 2024 – Apr 2024",
     icon: ucLogo,
     points: [
       "Developed full-featured car listing and inventory management web application",
@@ -319,7 +410,7 @@ const experiences = [
     title: "Content Creator",
     company: "Kaadhu Kuthu Channel",
     location: "Remote",
-    date: "Apr 2024 – Present",
+    date: "Apr 2024 – Dec 2024",
     icon: contentCreator,
     points: [
       "Content Creator for Instagram channel @kaadhu_kuthu",
@@ -332,49 +423,91 @@ const experiences = [
 
 const projects = [
   {
-    name: "Water Quality Optimization Digital Twin",
+    name: "AWS Disaster Recovery Automation Framework",
     description:
-      "Built a machine learning control system simulating an industrial wastewater treatment plant to optimize chemical dosing and aeration. Implemented Champion/Challenger model selection, projecting annual operational savings of $98K while ensuring environmental compliance.",
+      "Developed a menu-driven automation framework for executing predefined AWS FIS disaster recovery experiments against cloud workloads. Automated failure injection, workload recovery validation, and operational checks for ECS-based applications. Designed reusable automation components to make DR drills repeatable, consistent, and less dependent on manual execution.",
     tags: [
       {
-        name: "Python",
+        name: "AWS FIS",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "ECS",
         color: "blue-text-gradient",
       },
       {
-        name: "Scikit-Learn",
+        name: "CloudWatch",
         color: "green-text-gradient",
       },
       {
-        name: "Random Forest",
+        name: "Lambda",
         color: "pink-text-gradient",
       },
       {
-        name: "Gradient Boosting",
+        name: "Terraform",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Python",
         color: "orange-text-gradient",
       },
     ],
-
     source_code_link: "https://github.com/Srikanth-1106",
   },
   {
-    name: "Plastic Injection Molding Quality Control",
+    name: "ECR Cross-Region Container Image Distribution",
     description:
-      "Developed RegressorChain and Gradient Boosting models on synthetic time-series data to predict manufacturing quality metrics. Conducted dual-noise dataset analysis (5% vs 15%) to evaluate model robustness and optimize hyperparameters using GridSearchCV.",
+      "Built a multi-region GitHub Actions workflow to build and publish Docker images to corresponding Amazon ECR repositories across AWS regions. Implemented conditional workflow logic supporting both single-region and multi-region image publishing. Integrated GitHub OIDC with AWS IAM for secure, short-lived credentials during CI/CD execution.",
     tags: [
       {
-        name: "Python",
+        name: "Amazon ECR",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Docker Buildx",
         color: "blue-text-gradient",
       },
       {
-        name: "Pandas",
+        name: "GitHub Actions",
         color: "green-text-gradient",
       },
       {
-        name: "Scikit-Learn",
+        name: "AWS IAM",
         color: "pink-text-gradient",
       },
+      {
+        name: "GitHub OIDC",
+        color: "orange-text-gradient",
+      },
     ],
-
+    source_code_link: "https://github.com/Srikanth-1106",
+  },
+  {
+    name: "Chisel Yourself – Personal Development Platform",
+    description:
+      "Designed and developed a full-stack learning platform with structured learning paths, user progression, and content management. Built frontend components and backend APIs using Next.js, Node.js, and Supabase. Deployed scalable content delivery utilizing CDN optimization to achieve sub-3s global load times.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Supabase",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "GCP",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "REST APIs",
+        color: "blue-text-gradient",
+      },
+    ],
     source_code_link: "https://github.com/Srikanth-1106",
   },
   {
@@ -399,7 +532,50 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-
+    source_code_link: "https://github.com/Srikanth-1106",
+  },
+  {
+    name: "Water Quality Optimization Digital Twin",
+    description:
+      "Built a machine learning control system simulating an industrial wastewater treatment plant to optimize chemical dosing and aeration. Implemented Champion/Challenger model selection, projecting annual operational savings of $98K while ensuring environmental compliance.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Scikit-Learn",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Random Forest",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Gradient Boosting",
+        color: "orange-text-gradient",
+      },
+    ],
+    source_code_link: "https://github.com/Srikanth-1106",
+  },
+  {
+    name: "Plastic Injection Molding Quality Control",
+    description:
+      "Developed RegressorChain and Gradient Boosting models on synthetic time-series data to predict manufacturing quality metrics. Conducted dual-noise dataset analysis (5% vs 15%) to evaluate model robustness and optimize hyperparameters using GridSearchCV.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Pandas",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Scikit-Learn",
+        color: "pink-text-gradient",
+      },
+    ],
     source_code_link: "https://github.com/Srikanth-1106",
   },
   {
@@ -420,7 +596,6 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-
     source_code_link: "https://github.com/Srikanth-1106",
   },
   {
@@ -441,32 +616,6 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-
-    source_code_link: "https://github.com/Srikanth-1106",
-  },
-  {
-    name: "Chisel Yourself – Personal Development Platform",
-    description:
-      "Deployed a scalable content delivery platform utilizing CDN optimization to achieve sub-3s global load times. Developed structured learning paths with progression tracking, boosting user engagement and completion rates by 20%.",
-    tags: [
-      {
-        name: "Next.js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Node.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Supabase",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "GCP",
-        color: "orange-text-gradient",
-      },
-    ],
-
     source_code_link: "https://github.com/Srikanth-1106",
   },
   {
@@ -487,8 +636,52 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-
     source_code_link: "https://github.com/Srikanth-1106",
+  },
+];
+
+const certifications = [
+  {
+    title: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Verified",
+    description:
+      "Validates foundational understanding of AWS Cloud concepts, security, architecture, compute, networking, storage, and database services.",
+    icon: aws,
+    certificate_link:
+      "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+  },
+  {
+    title: "Google UX Design",
+    issuer: "Google (Coursera)",
+    date: "Verified",
+    description:
+      "Foundations of User Experience (UX) Design covering user-centric research, design sprints, wireframing, prototyping, and accessibility standards.",
+    icon: gcp,
+    certificate_link:
+      "https://www.coursera.org/account/accomplishments/verify/HEZAFV3T8SLX?utm_source=ios&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
+  },
+  {
+    title: "Figma Foundation",
+    issuer: "Figma (GUVI)",
+    date: "Verified",
+    description:
+      "Comprehensive mastery of modern UI/UX design systems, component libraries, responsive auto-layouts, and interactive user prototypes.",
+    icon: figma,
+    certificate_link: "https://www.guvi.in/verify-certificate?id=56P8G51ud1387757yx",
+  },
+];
+
+const achievements = [
+  {
+    title: "National-Level Cricket Athlete",
+    description:
+      "Demonstrated teamwork, discipline, communication, and composure under pressure while competing at the national level.",
+  },
+  {
+    title: "District Athletics Champion",
+    description:
+      "Demonstrated consistency, competitive performance, athletic endurance, and continuous improvement across track and field championships.",
   },
 ];
 
@@ -501,4 +694,6 @@ export {
   education,
   projects,
   experiences,
+  certifications,
+  achievements,
 };

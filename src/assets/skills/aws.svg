@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="12" fill="#232F3E"/>
+  <text x="32" y="28" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">AWS</text>
+  <path d="M16 38 C 26 47, 38 47, 48 38" fill="none" stroke="#FF9900" stroke-width="3.5" stroke-linecap="round"/>
+  <polygon points="44,34 50,38 44,42" fill="#FF9900"/>
+</svg>
+

@@ -15,12 +15,13 @@ const ExperienceCard = ({ experience }) => {
       contentStyle={{ background: "#1d1836", color: "#fff" }}
       contentArrowStyle={{ borderRight: "7px solid #232631" }}
       date={experience.date}
+      iconStyle={{ background: experience.iconBg || "#ffffff" }}
       icon={
-        <div className="flex justify-center items-center w-full h-full overflow-hidden">
+        <div className="flex justify-center items-center w-full h-full overflow-hidden rounded-full">
           <img
             src={experience.icon}
-            alt={experience.company_name}
-            className="w-full h-full object-cover rounded-full"
+            alt={experience.company || experience.company_name || experience.title}
+            className="w-full h-full object-contain p-1 rounded-full"
           />
         </div>
       }>
@@ -47,7 +48,6 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
-
   return (
     <>
       <motion.div variants={textVariant()} id="experience" className="scroll-mt-20">
@@ -64,4 +64,4 @@ const Experience = () => {
   );
 };
 
-export default Experience; 
+export default Experience;

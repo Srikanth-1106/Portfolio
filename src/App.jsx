@@ -10,6 +10,7 @@ import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import StarsCanvas from "./components/canvas/Stars";
 
@@ -82,6 +83,10 @@ const App = () => {
 
               <div className="relative mt-15 pt-10">
                 <Projects />
+              </div>
+
+              <div className="relative mt-15 pt-10">
+                <Certifications />
               </div>
 
               <div className="relative mt-15 pt-10 min-h-screen pb-10">

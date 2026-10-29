@@ -5,6 +5,8 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
 
 const tech = [
+  technologies.cloud,
+  technologies.devops,
   technologies.languages,
   technologies.frameworks,
   technologies.libraries,
@@ -14,6 +16,8 @@ const tech = [
 ];
 
 const techVariants = [
+  "Cloud & AWS",
+  "DevOps & IaC",
   "Languages",
   "Frameworks",
   "Libraries",
@@ -24,19 +28,19 @@ const techVariants = [
 
 const techItemClasses = "relative flex items-center group cursor-pointer";
 const techTooltipClasses =
-  "opacity-0 w-fit min-w-[80px] bg-primary text-[#e5e6e9] text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 px-3 -top-12 -left-1/3 pointer-events-none";
+  "opacity-0 w-fit min-w-[80px] bg-primary text-[#e5e6e9] text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 px-3 -top-12 -left-1/3 pointer-events-none transition-opacity duration-200";
 
 const Skills = () => {
   const languageSections = tech.map((technology, index) => (
-    <div className="w-full h-fit flex gap-2 md:flex-row flex-col" key={index}>
-      <h3 className="md:hidden text-[#e5e6e9]">{techVariants[index]}</h3>
+    <div className="w-full h-fit flex gap-2 md:flex-row flex-col min-h-[48px] justify-center" key={index}>
+      <h3 className="md:hidden text-[#e5e6e9] font-medium text-[16px]">{techVariants[index]}</h3>
       <motion.div
-        className="w-full flex flex-row flex-wrap gap-2"
+        className="w-full flex flex-row flex-wrap gap-3 items-center"
         variants={fadeIn("right", "spring", 0.75)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}>
-        {technology.map((tech, idx) => (
+        {technology?.map((tech) => (
           <a
             href={tech.link}
             key={tech.name}
@@ -59,7 +63,7 @@ const Skills = () => {
 
   const techNames = techVariants.map((techName, index) => (
     <h3
-      className="h-[50px] md:flex items-center hidden text-[#e5e6e9]"
+      className="min-h-[48px] md:flex items-center hidden text-[#e5e6e9] font-semibold whitespace-nowrap text-[16px]"
       key={index}>
       {techName}
     </h3>
@@ -93,9 +97,9 @@ const Skills = () => {
             {techNames}
           </motion.div>
 
-          <div className="w-[2px] h-[400px] bg-[#cbb8f5] rounded-lg md:flex hidden mx-4 md:mx-6 lg:mx-8 flex-shrink-0" />
+          <div className="w-[2px] bg-[#cbb8f5] rounded-lg md:flex hidden mx-4 md:mx-6 lg:mx-8 flex-shrink-0 self-stretch" />
 
-          <div className="md:w-[80%] lg:flex-1 w-full pl-0 md:pl-2 h-full flex flex-col gap-8">
+          <div className="md:w-[80%] lg:flex-1 w-full pl-0 md:pl-2 h-full flex flex-col gap-5 justify-between">
             {languageSections}
           </div>
         </motion.div>

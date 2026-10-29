@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#4F46E5"/>
+  <circle cx="32" cy="32" r="22" fill="#3730A3"/>
+  <text x="32" y="40" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="26" fill="#38BDF8" text-anchor="middle">π</text>
+  <circle cx="45" cy="19" r="3.5" fill="#A855F7"/>
+</svg>
+

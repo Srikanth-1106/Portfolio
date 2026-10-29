@@ -52,7 +52,7 @@ const About = ({ isMobile }) => {
             <motion.p
               variants={fadeIn("", "", 0.1, 1)}
               className="mt-4 text-secondary text-[17px] max-w-4xl leading-[30px]">
-              Hello! I am Srikanth Senthilkumar, a passionate Full Stack Developer and tech enthusiast currently pursuing a Bachelor of Engineering in Computer Science at SSN College of Engineering, Chennai. I specialize in MERN stack development, Flutter mobile development, and have experience in WebXR projects using Three.js and Blender. I love creating innovative solutions and have worked on various projects including automotive platforms, content creation, and sports achievements. I thrive in collaborative environments and am always eager to learn new technologies and make a meaningful impact through technology!
+              Hello! I am Srikanth Senthilkumar, a passionate Cloud / DevOps Engineer and Software Engineer with a Bachelor of Engineering in Computer Science from SSN College of Engineering, Chennai. I have hands-on experience in AWS (EC2, ECS, ECR, S3, IAM, CloudWatch, Lambda, FIS), CI/CD automation with GitHub Actions and AWS CodePipeline, Docker & Docker Buildx, Terraform, and disaster recovery automation. Alongside my cloud expertise, I bring strong software engineering skills in Next.js, React, Node.js, Express, MERN stack, Supabase, Flutter, and WebXR. I thrive in building reliable, scalable, automated cloud-native systems and making a meaningful impact through technology!
             </motion.p>
 
             <a

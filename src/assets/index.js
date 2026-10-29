@@ -32,6 +32,15 @@ import postman from "./skills/postman.svg";
 import express from "./skills/expressjs.png";
 import gcp from "./skills/gcp.png";
 import colab from "./skills/colab.png";
+import aws from "./skills/aws.svg";
+import githubactions from "./skills/githubactions.svg";
+import terraform from "./skills/terraform.svg";
+import nextjs from "./skills/nextjs.svg";
+import supabase from "./skills/supabase.svg";
+import bash from "./skills/bash.svg";
+import powerbi from "./skills/powerbi.svg";
+import vscode from "./skills/vscode.svg";
+import kubernetes from "./skills/kubernetes.svg";
 
 // Education logos
 import ssnLogo from "./education/ssnLogo.png";
@@ -39,6 +48,8 @@ import tptLogo from "./TPT LOGO.jpeg";
 import notreDameLogo from "./education/notreDameLogo.png";
 
 // Experience icons
+import chargebeeLogo from "./experiences/chargebee.png";
+import dreampiLogo from "./experiences/dreampi.jpg";
 import contentCreator from "./experiences/content-creator.jpeg";
 import sfLogo from "./experiences/SF logo.png";
 import ucLogo from "./experiences/UC.png";
@@ -98,6 +109,15 @@ export {
   express,
   gcp,
   colab,
+  aws,
+  githubactions,
+  terraform,
+  nextjs,
+  supabase,
+  bash,
+  powerbi,
+  vscode,
+  kubernetes,
 
   // Education
   ssnLogo,
@@ -105,6 +125,8 @@ export {
   notreDameLogo,
 
   // Experiences
+  chargebeeLogo,
+  dreampiLogo,
   contentCreator,
   sfLogo,
   ucLogo,
