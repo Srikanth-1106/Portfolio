@@ -2,6 +2,8 @@ import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import * as allAssets from "../../assets";
+import { logo } from "../../assets";
 
 const DevAnimationPreloader = ({ setLoading }) => {
   const [progress, setProgress] = useState(0);
@@ -20,46 +22,9 @@ const DevAnimationPreloader = ({ setLoading }) => {
       "./astro/scene.gltf",
     ];
 
-    const imageURLs = [
-      "/src/assets/project/assistiveGlasses.png",
-      "/src/assets/project/boneFracture.png",
-      "/src/assets/project/internshipPortal.png",
-      "/src/assets/project/jobconnect.png",
-      "/src/assets/project/nextgenChatbot.png",
-      "/src/assets/skills/html.png",
-      "/src/assets/skills/css.png",
-      "/src/assets/skills/javascript.png",
-      "/src/assets/skills/typescript.png",
-      "/src/assets/skills/python.png",
-      "/src/assets/skills/c.svg",
-      "/src/assets/skills/java.svg",
-      "/src/assets/skills/Cplusplus.png",
-      "/src/assets/skills/reactjs.png",
-      "/src/assets/skills/tailwind.png",
-      "/src/assets/skills/nodejs.png",
-      "/src/assets/skills/mongodb.png",
-      "/src/assets/skills/postgres.png",
-      "/src/assets/skills/docker.png",
-      "/src/assets/skills/figma.png",
-      "/src/assets/skills/git.png",
-      "/src/assets/skills/threejs.svg",
-      "/src/assets/skills/flutter.svg",
-      "/src/assets/skills/postman.svg",
-      "/src/assets/skills/expressjs.png",
-      "/src/assets/skills/gcp.png",
-      "/src/assets/skills/colab.png",
-      "/src/assets/education/ssnLogo.png",
-      "/src/assets/service/backend.png",
-      "/src/assets/service/creator.png",
-      "/src/assets/service/mobile.png",
-      "/src/assets/service/web.png",
-      "/src/assets/social_media/github.png",
-      "/src/assets/social_media/instagram.png",
-      "/src/assets/social_media/linkedin.svg",
-      "/src/assets/general/sri.png",
-      "/src/assets/general/menu.svg",
-      "/src/assets/general/close.svg",
-    ];
+    const imageURLs = Object.values(allAssets).filter(
+      (url) => typeof url === "string" && (url.includes(".png") || url.includes(".svg") || url.includes(".jpg") || url.includes(".jpeg") || url.includes("/assets/"))
+    );
 
     let loadedCount = 0;
     const totalAssets = modelURLs.length + imageURLs.length;
@@ -302,8 +267,8 @@ const DevAnimationPreloader = ({ setLoading }) => {
               />
               <div className="relative w-20 h-20 rounded-full overflow-hidden border-[3px] border-[#0e1630]">
                 <img
-                  src="/src/assets/general/sri.png"
-                  alt="Sri"
+                  src={logo}
+                  alt="Srikanth"
                   className="w-full h-full object-cover"
                 />
               </div>

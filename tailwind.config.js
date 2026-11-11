@@ -19,7 +19,6 @@ export default {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
       },
       animation: {
         spin: "spin 1.5s linear infinite",

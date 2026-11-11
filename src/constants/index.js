@@ -419,7 +419,7 @@ const experiences = [
     title: "Freelancer",
     company: "Kaadhu Kuthu Channel",
     location: "",
-    date: "Apr 2024 – Dec 2024",
+    date: "Aug 2022 – Jan 2024",
     icon: youtubeLogo,
     iconBg: "#ffffff",
     points: [
