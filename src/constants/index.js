@@ -44,6 +44,7 @@ import {
   ucLogo,
   chiselLogo,
   aapaavaniLogo,
+  youtubeLogo,
   backend,
   creator,
   mobile,
@@ -415,11 +416,12 @@ const experiences = [
     ],
   },
   {
-    title: "Content Creator",
+    title: "Freelancer",
     company: "Kaadhu Kuthu Channel",
-    location: "Remote",
+    location: "",
     date: "Apr 2024 – Dec 2024",
-    icon: contentCreator,
+    icon: youtubeLogo,
+    iconBg: "#ffffff",
     points: [
       "Content Creator for Instagram channel @kaadhu_kuthu",
       "Helped grow the channel to 140K+ followers",
