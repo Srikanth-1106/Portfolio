@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import Lottie from "react-lottie";
-import devAnimationData from "../../assets/animations/developer-animation.json";
+import React, { useState, useEffect, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
@@ -28,7 +26,6 @@ const DevAnimationPreloader = ({ setLoading }) => {
       "/src/assets/project/internshipPortal.png",
       "/src/assets/project/jobconnect.png",
       "/src/assets/project/nextgenChatbot.png",
-
       "/src/assets/skills/html.png",
       "/src/assets/skills/css.png",
       "/src/assets/skills/javascript.png",
@@ -51,22 +48,17 @@ const DevAnimationPreloader = ({ setLoading }) => {
       "/src/assets/skills/expressjs.png",
       "/src/assets/skills/gcp.png",
       "/src/assets/skills/colab.png",
-
       "/src/assets/education/ssnLogo.png",
-
       "/src/assets/service/backend.png",
       "/src/assets/service/creator.png",
       "/src/assets/service/mobile.png",
       "/src/assets/service/web.png",
-
       "/src/assets/social_media/github.png",
       "/src/assets/social_media/instagram.png",
       "/src/assets/social_media/linkedin.svg",
-
       "/src/assets/general/sri.png",
       "/src/assets/general/menu.svg",
       "/src/assets/general/close.svg",
-
     ];
 
     let loadedCount = 0;
@@ -129,7 +121,7 @@ const DevAnimationPreloader = ({ setLoading }) => {
         console.log("Using fallback to complete loading");
         updateProgress(100);
       }
-    }, 10000); 
+    }, 10000);
 
     return () => clearTimeout(fallbackTimer);
   }, []);
@@ -138,11 +130,11 @@ const DevAnimationPreloader = ({ setLoading }) => {
     if (progress >= 100) {
       const timer = setTimeout(() => {
         setAnimationComplete(true);
-      }, 500);
+      }, 800);
 
       const finalTimer = setTimeout(() => {
         setLoading(false);
-      }, 1000);
+      }, 1500);
 
       return () => {
         clearTimeout(timer);
@@ -151,56 +143,274 @@ const DevAnimationPreloader = ({ setLoading }) => {
     }
   }, [progress, setLoading]);
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: devAnimationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // Terminal-style command lines that appear progressively
+  const terminalLines = useMemo(
+    () => [
+      { cmd: "$ initializing portfolio...", color: "#00cea8" },
+      { cmd: "$ loading cloud infrastructure...", color: "#6b8aff" },
+      { cmd: "$ deploying UI components...", color: "#915eff" },
+      { cmd: "$ connecting APIs & services...", color: "#00cea8" },
+      { cmd: "$ compiling full-stack modules...", color: "#6b8aff" },
+      { cmd: "$ running final checks ✓", color: "#00ff88" },
+    ],
+    []
+  );
 
-  const quotes = [
-    "Turning coffee into code...",
-    "Crafting pixels into experiences...",
-    "Converting imagination into reality...",
-    "Transforming ideas into innovation...",
-  ];
+  const visibleLines = Math.min(
+    terminalLines.length,
+    Math.floor((progress / 100) * terminalLines.length) + 1
+  );
 
-  const quoteIndex = Math.min(3, Math.floor(progress / 25));
-  const currentQuote = quotes[quoteIndex];
+  // Floating tech icon symbols
+  const floatingIcons = useMemo(
+    () => ["⚛", "☁", "⚡", "🐳", "⚙", "λ", "{ }", "< />", "📦", "🔗"],
+    []
+  );
+
+  // Generate particle positions once
+  const particles = useMemo(
+    () =>
+      Array.from({ length: 40 }, (_, i) => ({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: Math.random() * 3 + 1,
+        duration: Math.random() * 4 + 3,
+        delay: Math.random() * 3,
+      })),
+    []
+  );
+
+  const floatingItems = useMemo(
+    () =>
+      floatingIcons.map((icon, i) => ({
+        icon,
+        id: i,
+        x: 10 + Math.random() * 80,
+        y: 10 + Math.random() * 80,
+        duration: Math.random() * 6 + 4,
+        delay: Math.random() * 2,
+      })),
+    [floatingIcons]
+  );
 
   return (
-    <motion.div
-      className="fixed top-0 left-0 w-full h-screen bg-gradient-to-b from-[#0e1630] to-[#1a1a2e] flex flex-col justify-center items-center z-50"
-      initial={{ opacity: 1 }}
-      animate={{ opacity: animationComplete ? 0 : 1 }}
-      transition={{ duration: 0.8 }}>
-      <img
-        src="/src/assets/general/sri.png"
-        alt="Site icon"
-        className="w-14 h-14 rounded-full object-cover mb-4"
-      />
-      <div className="w-[280px] h-[280px] mb-8">
-        <Lottie options={defaultOptions} />
-      </div>
-
-      <motion.div
-        className="text-white text-xl font-medium tracking-wide mb-10 text-center px-4"
-        animate={{ opacity: [0.5, 1, 0.5] }}
-        transition={{ duration: 2, repeat: Infinity }}>
-        <span className="text-[#915eff]">{currentQuote}</span>
-      </motion.div>
-
-      <div className="w-64 h-[3px] bg-gray-800/30 rounded-full">
+    <AnimatePresence>
+      {!animationComplete && (
         <motion.div
-          className="h-full rounded-full bg-gradient-to-r from-[#915eff] via-[#6b8aff] to-[#915eff]"
-          style={{ width: `${Math.min(100, progress)}%` }}
-        />
-      </div>
+          className="fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center z-50 overflow-hidden"
+          style={{ background: "linear-gradient(135deg, #0a0a1a 0%, #0e1630 40%, #141432 70%, #0a0a1a 100%)" }}
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0, scale: 1.05 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+        >
+          {/* Animated grid background */}
+          <div className="absolute inset-0 opacity-[0.04]"
+            style={{
+              backgroundImage: `linear-gradient(rgba(145, 94, 255, 0.3) 1px, transparent 1px),
+                                linear-gradient(90deg, rgba(145, 94, 255, 0.3) 1px, transparent 1px)`,
+              backgroundSize: "60px 60px",
+            }}
+          />
 
-      <p className="mt-4 text-white/70 text-sm">{Math.min(100, progress)}%</p>
-    </motion.div>
+          {/* Floating particles */}
+          {particles.map((p) => (
+            <motion.div
+              key={`particle-${p.id}`}
+              className="absolute rounded-full"
+              style={{
+                left: `${p.x}%`,
+                top: `${p.y}%`,
+                width: p.size,
+                height: p.size,
+                background: `rgba(${p.id % 2 === 0 ? "145, 94, 255" : "0, 206, 168"}, 0.4)`,
+              }}
+              animate={{
+                y: [-20, 20, -20],
+                opacity: [0.2, 0.6, 0.2],
+              }}
+              transition={{
+                duration: p.duration,
+                repeat: Infinity,
+                delay: p.delay,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+
+          {/* Floating tech icons */}
+          {floatingItems.map((item) => (
+            <motion.div
+              key={`float-${item.id}`}
+              className="absolute text-xl select-none pointer-events-none"
+              style={{
+                left: `${item.x}%`,
+                top: `${item.y}%`,
+                filter: "blur(0.5px)",
+              }}
+              animate={{
+                y: [-15, 15, -15],
+                x: [-8, 8, -8],
+                opacity: [0.08, 0.2, 0.08],
+                rotate: [0, 10, -10, 0],
+              }}
+              transition={{
+                duration: item.duration,
+                repeat: Infinity,
+                delay: item.delay,
+                ease: "easeInOut",
+              }}
+            >
+              {item.icon}
+            </motion.div>
+          ))}
+
+          {/* Glowing orbs */}
+          <motion.div
+            className="absolute w-[300px] h-[300px] rounded-full"
+            style={{
+              background: "radial-gradient(circle, rgba(145,94,255,0.12) 0%, transparent 70%)",
+              top: "15%",
+              right: "10%",
+            }}
+            animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute w-[250px] h-[250px] rounded-full"
+            style={{
+              background: "radial-gradient(circle, rgba(0,206,168,0.1) 0%, transparent 70%)",
+              bottom: "20%",
+              left: "5%",
+            }}
+            animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.5, 0.2] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          />
+
+          {/* Main content */}
+          <div className="relative z-10 flex flex-col items-center max-w-lg w-full px-6">
+
+            {/* Profile picture with animated ring */}
+            <div className="relative mb-8">
+              <motion.div
+                className="absolute -inset-2 rounded-full"
+                style={{
+                  background: "conic-gradient(from 0deg, #915eff, #00cea8, #6b8aff, #915eff)",
+                }}
+                animate={{ rotate: 360 }}
+                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+              />
+              <div className="relative w-20 h-20 rounded-full overflow-hidden border-[3px] border-[#0e1630]">
+                <img
+                  src="/src/assets/general/sri.png"
+                  alt="Sri"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Name and title */}
+            <motion.h1
+              className="text-white text-2xl font-bold tracking-wide mb-1"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Srikanth
+            </motion.h1>
+            <motion.p
+              className="text-[#aaa6c3] text-sm tracking-widest uppercase mb-10"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              Cloud & Full-Stack Engineer
+            </motion.p>
+
+            {/* Terminal window */}
+            <motion.div
+              className="w-full rounded-xl overflow-hidden mb-8"
+              style={{
+                background: "rgba(10, 10, 30, 0.8)",
+                border: "1px solid rgba(145, 94, 255, 0.2)",
+                backdropFilter: "blur(10px)",
+                boxShadow: "0 0 40px rgba(145, 94, 255, 0.1), inset 0 1px 0 rgba(255,255,255,0.05)",
+              }}
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              {/* Terminal header */}
+              <div className="flex items-center gap-2 px-4 py-3"
+                style={{ borderBottom: "1px solid rgba(145, 94, 255, 0.1)" }}
+              >
+                <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
+                <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
+                <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
+                <span className="ml-3 text-xs text-white/30 font-mono">portfolio — bash</span>
+              </div>
+
+              {/* Terminal body */}
+              <div className="px-4 py-4 font-mono text-sm space-y-2 min-h-[180px]">
+                {terminalLines.slice(0, visibleLines).map((line, i) => (
+                  <motion.div
+                    key={i}
+                    className="flex items-center gap-2"
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: i * 0.1 }}
+                  >
+                    <span style={{ color: line.color }}>{line.cmd}</span>
+                    {i === visibleLines - 1 && progress < 100 && (
+                      <motion.span
+                        className="inline-block w-2 h-4 bg-white/70"
+                        animate={{ opacity: [1, 0, 1] }}
+                        transition={{ duration: 0.8, repeat: Infinity }}
+                      />
+                    )}
+                  </motion.div>
+                ))}
+                {progress >= 100 && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-[#00ff88] mt-2 font-semibold"
+                  >
+                    ✓ Ready to launch!
+                  </motion.div>
+                )}
+              </div>
+            </motion.div>
+
+            {/* Progress bar */}
+            <div className="w-full mb-3">
+              <div className="w-full h-[4px] rounded-full overflow-hidden"
+                style={{ background: "rgba(255,255,255,0.06)" }}
+              >
+                <motion.div
+                  className="h-full rounded-full"
+                  style={{
+                    width: `${Math.min(100, progress)}%`,
+                    background: "linear-gradient(90deg, #915eff, #00cea8, #6b8aff)",
+                    boxShadow: "0 0 12px rgba(145, 94, 255, 0.5)",
+                  }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                />
+              </div>
+            </div>
+
+            {/* Percentage */}
+            <div className="flex justify-between w-full items-center">
+              <span className="text-white/30 text-xs font-mono">loading assets</span>
+              <span className="text-white/70 text-sm font-mono font-semibold">
+                {Math.min(100, progress)}%
+              </span>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 

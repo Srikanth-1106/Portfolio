@@ -54,6 +54,7 @@ import contentCreator from "./experiences/content-creator.jpeg";
 import sfLogo from "./experiences/SF logo.png";
 import ucLogo from "./experiences/UC.png";
 import chiselLogo from "./experiences/chisel-logo.png";
+import aapaavaniLogo from "./experiences/aapaavani.png";
 import catLogo from "./project/cat.png"; 
 import devLogo from "./project/dev.png";
 
@@ -131,6 +132,7 @@ export {
   sfLogo,
   ucLogo,
   chiselLogo,
+  aapaavaniLogo,
   catLogo,
   devLogo,
 
