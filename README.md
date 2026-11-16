@@ -20,7 +20,11 @@ This portfolio website highlights my projects, skills, and experiences with:
 ---
 ## 📸 Full-Page Preview
 
-<img src="./src/assets/Portfolio-Preview.png" alt="Full-page screenshot of portfolio" width="100%" />
+<p align="center">
+  <a href="./src/assets/Portfolio-Preview.png">
+    <img src="./src/assets/Portfolio-Preview.png" alt="Full-page screenshot of portfolio" width="100%" />
+  </a>
+</p>
 
 ---
 
