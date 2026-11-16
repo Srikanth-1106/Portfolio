@@ -20,7 +20,7 @@ This portfolio website highlights my projects, skills, and experiences with:
 ---
 ## 📸 Full-Page Preview
 
-![Full-page screenshot of portfolio](./src/assets/src/assets/src/assets/Portfolio-Preview.png)
+![Full-page screenshot of portfolio](./src/assets/Portfolio-Preview.png)
 
 ---
 
