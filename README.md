@@ -18,16 +18,6 @@ This portfolio website highlights my projects, skills, and experiences with:
 - A contact form with integrated email functionality using EmailJS
 
 ---
-## 📸 Full-Page Preview
-
-<p align="center">
-  <a href="./src/assets/Portfolio-Preview.png">
-    <img src="./src/assets/Portfolio-Preview.png" alt="Full-page screenshot of portfolio" width="100%" />
-  </a>
-</p>
-
----
-
 ## 🌐 Live Demo
 
 Check out the live version here: [https://srikanth-portfolio.netlify.app/](https://srikanth-portfolio.netlify.app/)
